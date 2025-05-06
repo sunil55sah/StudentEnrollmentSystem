@@ -56,3 +56,13 @@ StudentEnrollmentSystem/
 5) Run on Apache Tomcat Server
 
 6) Visit: http://localhost:8080/StudentEnrollmentSystem/login.jsp
+
+
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/Registration%20.png)
+  ![Student Dashboard](https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/sign%20and%20admin%20login%20page%20.png)
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/admin%20can%20add%20course%20.png)
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/course%20adding%20.png)
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/course%20added%20.png)
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/studentlogin.png)
+  ![Student Dashboard]( https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/without%20enrollment.png)
+  ![Student Dashboard](https://github.com/sunil55sah/StudentEnrollmentSystem/blob/main/with%20enrollement.png)
