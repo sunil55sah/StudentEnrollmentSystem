@@ -1,0 +1,37 @@
+
+---
+
+## 💾 Database Schema (MySQL)
+
+```sql
+CREATE DATABASE student_enrollment;
+
+USE student_enrollment;
+
+CREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
+
+CREATE TABLE admin (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(100)
+);
+
+CREATE TABLE course (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100),
+    instructor VARCHAR(100),
+    description TEXT
+);
+
+CREATE TABLE enrollment (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (course_id) REFERENCES course(id)
+);
