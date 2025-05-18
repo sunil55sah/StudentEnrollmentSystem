@@ -1,11 +1,9 @@
-# Use an official Tomcat base image
+# Stage 1: Build the WAR using Maven
+FROM maven:3.8.5-openjdk-17 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Stage 2: Run the WAR on Tomcat
 FROM tomcat:9.0
-
-# Remove the default ROOT app
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
-
-# Copy your built WAR file into the ROOT webapp folder
-COPY target/student-course-enrollment-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
-
-# Expose default Tomcat port
-EXPOSE 8080
+COPY --from=build /app/target/student-course-enrollment-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
