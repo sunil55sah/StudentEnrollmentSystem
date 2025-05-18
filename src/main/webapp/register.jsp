@@ -3,27 +3,24 @@
 <html>
 <head>
     <title>Register - Student Course Enrollment</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/login.css"> <!-- Reuse login.css -->
 </head>
 <body>
-<div class="container mt-5">
+<h2>Registration for Student Course Enrollment System</h2>
     <h2>Student Registration</h2>
     <form method="post" action="register">
-        <div class="mb-3">
-            <label>Name:</label>
-            <input type="text" name="name" class="form-control" required/>
-        </div>
-        <div class="mb-3">
-            <label>Email:</label>
-            <input type="email" name="email" class="form-control" required/>
-        </div>
-        <div class="mb-3">
-            <label>Password:</label>
-            <input type="password" name="password" class="form-control" required/>
-        </div>
-        <button type="submit" class="btn btn-primary">Register</button>
-        <a href="login.jsp" class="btn btn-link">Already have an account?</a>
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Register"><br><br>
+
+        <a href="login.jsp">Already have an account?</a>
     </form>
-</div>
 </body>
 </html>

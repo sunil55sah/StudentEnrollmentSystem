@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
+
 <body>
+    <h2>Student Course Enrollment System</h2>
     <h2>Students and Administrators - Sign in here</h2>
     <form action="login" method="post">
         <label for="email">Email:</label>
