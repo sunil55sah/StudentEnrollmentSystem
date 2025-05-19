@@ -2,7 +2,7 @@
 
 A full-stack Java web application for managing students, courses, and enrollments. Built using **Servlets**, **JSP**, **JDBC**, and **MySQL**, with **Bootstrap** for styling.
 ## # Project is successfully **hosted on Railway using Docker**:  
- [Click to open Student Course Enrollment System](https://studentenrollmentsystem-production.up.railway.app/login.jsp)
+ [Click to open Student Course Enrollment System](https://studentenrollmentsystem-production.up.railway.app/)
 ---
 
 ##  Features
