@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/login.css"> <!-- Reuse login.css -->
 </head>
 <body>
+<h2>Registration for Student Course Enrollment System</h2>
     <h2>Student Registration</h2>
     <form method="post" action="register">
         <label>Name:</label>

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h2>Student Course Enrollment System</h2>
     <h2>Students and Administrators - Sign in here</h2>
     <form action="login" method="post">
         <label for="email">Email:</label>
