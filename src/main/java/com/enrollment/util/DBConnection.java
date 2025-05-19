@@ -6,17 +6,24 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/student_course_db";
-	private static final String JDBC_USER = "root"; // Replace with your DB username
-	private static final String JDBC_PASSWORD = "root"; // Replace with your DB password
+	private static Connection connection = null;
 
 	public static Connection getConnection() throws SQLException {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver"); // Load MySQL JDBC driver
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		if (connection == null || connection.isClosed()) {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver"); // Load MySQL JDBC driver
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 
-		return DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+			// Read Railway environment variables
+			String jdbcURL = System.getenv("MYSQL_URL");
+			String dbUser = System.getenv("MYSQLUSER");
+			String dbPassword = System.getenv("MYSQLPASSWORD");
+
+			// Establish connection
+			connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+		}
+		return connection;
 	}
 }
